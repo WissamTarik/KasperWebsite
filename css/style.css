@@ -1,0 +1,401 @@
+:root{
+    --main-color:rgb(25, 200, 250)  ;
+}
+body{
+    font-family: "Open Sans", sans-serif;
+}
+
+/* Start global */
+.title h3{
+    letter-spacing: 2px;
+}
+  .title h3::after{
+    position: absolute;
+    content: '';
+    bottom: -20px;
+    width: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    height: 2px;
+  }
+  .title h3::before{
+    position: absolute;
+    content: '';
+    bottom: -30px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid black;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+/* End global */
+
+/* Start header */
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.6) 0 100%), url(../images/landing.jpg);
+    background-position: center;
+    background-size: cover;
+}
+header nav .navbar-toggler:focus{
+     box-shadow: none;
+}
+nav.navbar-expand-lg .navbar-nav .nav-link{
+    color: white;
+    font-size: .875rem;
+    transition: 0.3s color;
+    cursor: pointer;
+    position: relative;
+   /* border-bottom: 1px solid var(--main-color); */
+   padding: 0;
+   margin-right: 23px;
+
+}
+nav .nav-link::after{
+    position: absolute;
+    content: '';
+    bottom: -37px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--main-color);
+}
+nav .navbar-nav .nav-link.active, nav .navbar-nav .nav-link:hover{
+    color: var(--main-color);
+}
+ nav .navbar-nav .nav-link:hover::after, nav .navbar-nav .nav-link.active::after{
+    width: 100%;
+}
+header .icon{
+    right: 100px;
+     top: 30px;
+     padding-left: 20px;
+     border-left: 1px solid white;
+     font-weight: 900;
+     font-size: 1.25rem;
+}
+header .inner{
+    background-color: var(--main-color);
+}
+header .carousel-inner .inner{
+    background-color: rgb(21,101,123);
+}
+header .carousel-inner h2,header .carousel-inner .inner p:first-of-type{
+    font-size: 2rem;
+}
+header .carousel-inner .inner p:last-of-type{
+ font-size: .875rem;
+}  
+header #carouselExampleIndicators button[data-bs-slide="next"],header #carouselExampleIndicators button[data-bs-slide="prev"]{
+   font-size: 2rem;
+   color: rgb(221, 221, 221) ;
+}
+header #carouselExampleIndicators .carousel-control-prev{
+    left: -40px;
+}
+
+header .carousel-indicators button[data-bs-target]{
+    width: 15px;
+    height: 15px;
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: transparent;
+    margin-top: 30px;
+}
+header .carousel-indicators  button[data-bs-target].active{
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+
+}
+
+/* End header */
+
+/* Start services */
+#services h4{
+    color: var(--main-color);
+    font-size: 1.1875rem;
+}
+#services .inner p{
+    width: 80%;
+    font-size: 1.0625rem;
+    
+}
+/* End services */
+
+/* Start Design */
+#design {
+    height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.6) 0 100%), url(../images/design-features.jpg);
+}
+#design .image{
+    bottom: -100px;
+    left: 10%;
+}
+#design .content{
+    background-color: rgb(21,101,123);
+}
+/* End Design */
+
+/* Start portfolio */
+#portfolio .layer{
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translateY(105%);
+      transition: 0.5s transform;
+}
+#portfolio .inner:hover .layer{
+    transform: translateY(0);
+} 
+#portfolio .inner img{
+    transition: 0.3s transform;
+}
+#portfolio .inner:hover img{
+    transform: scale(1.2) rotate(5deg);}
+#portfolio h6{
+    color: var(--main-color);
+}
+#portfolio .nav-link{
+    color: black;
+}
+#portfolio .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+   border-radius: 0;
+    background-color:rgb(25,200,250);
+    color: white;
+}
+#portfolio a.btn{
+    background-color: rgb(25,200,250);
+    width: fit-content;
+    padding: 10px 15px;
+}
+/* End portfolio */
+
+/* Start Video */
+#video .layer{
+    background-image: linear-gradient(rgba(0,0,0,0.6) 0 100%);
+}
+#video .content ,#info .container{
+    background-color: rgba(21,101,123,0.6);
+}
+/* End Video */
+
+
+/* Start about */
+#about .container img{
+    bottom: -100px;
+}
+
+/* End about */
+/* Start info */
+#info{
+    background-image: linear-gradient(rgba(0,0,0,0.6) 0 100%) , url(../images/stats.png);
+
+}
+#info span{
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+#info h4{
+    font-size: 3.125rem;
+}
+/* End info */
+
+/* Start skills */
+#skills .inner img{
+    width: 20%;
+}
+#skills .carousel-indicators [data-bs-target]{
+    width: 18px;
+    height: 18px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+ #skills .carousel-indicators .active{
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+} 
+#skills .inner .progress{
+    height: 1.8625rem;
+}
+#skills .inner .progress .progress-bar{
+    background-color: var(--main-color);
+}
+#skills .inner .progress:first-of-type .progress-bar,#skills .inner .progress:last-of-type .progress-bar{
+    width: 90%;
+}
+#skills .inner .progress-container:nth-of-type(2) .progress-bar{
+width: 85%;
+}
+#skills .inner .progress-container:nth-of-type(3) .progress-bar{
+width: 80%;
+}
+#skills .inner .progress-container span{
+    top: -20px;
+}
+#skills .inner .progress-container:first-of-type span,#skills .inner .progress-container:last-of-type span{
+    right: 6.2%;
+   
+}
+#skills .inner .progress-container:nth-of-type(2) span{
+    right: 12%;
+    }
+#skills .inner .progress-container:nth-of-type(3) span{
+    right: 17%;
+    }
+#skills .inner .progress-container span::after{
+    position: absolute;
+    content: '';
+    border: 10px solid green;
+    border-color: black transparent transparent transparent;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* End skills */
+
+
+/* Start Quote */
+#quote{
+    background-image: linear-gradient(rgba(0,0,0,0.8) 0 100%) ,url(../images/quote.jpg); 
+}
+#quote p{
+    font-size: 1.875rem;
+    width: 80%;
+}
+
+/* End Quote */
+
+/* Start pricing */
+#pricing .container h3{
+    font-size: 1.1875rem;
+}
+#pricing .container h4{
+    font-size: 3.75rem;
+}
+#pricing .container h4 span:first-of-type{
+    font-size: 1.5625rem;
+    top: 0;
+    left: 18%;
+   
+}
+#pricing .container h4 span:last-of-type{
+    bottom: 0;
+    right: 18%;
+    font-size: 20px;
+    transform: translateY(-50%);
+}
+#pricing > div:last-of-type p{
+    font-size: 1.25rem;
+}
+#pricing > div:last-of-type a{
+    background-color: var(--main-color);
+}
+/* End pricing */
+
+/* Start subscribe */
+#subscribe{
+    background-image: linear-gradient(rgba(0,0,0,0.6) 0 100%) ,url(../images/subscribe.jpg);
+}
+#subscribe .input-group button.btn ,#contact button.btn{
+ background-color: var(--main-color);
+}
+#subscribe .input-group input::placeholder{
+    color: white;
+}
+#subscribe .input-group input.form-control:focus{
+    box-shadow: none;
+    border-color: white;
+}
+#subscribe .input-group input{
+    caret-color: var(--main-color);
+}
+#subscribe i{
+    top: 40%;
+    left: 8%;
+}
+/* End subscribe */
+
+/* Start contact */
+#contact h4{
+    font-size: 1.1875rem;
+}
+#contact span{
+    color: rgb(119, 119, 119)
+    ;
+}
+/* End contact */
+
+/* Start footer */
+footer{
+    background-image:  linear-gradient(rgba(0,0,0,.6) 0 100%) , url(/images/subscribe.jpg);
+    background-position: center;
+    background-size: cover;
+}
+footer h3{
+    font-size: 1.375rem;
+}
+footer h3::after{
+    position: absolute;
+    content: '';
+    left: 50%;
+    bottom: 0;
+    width: 15%;
+    background-color: white;
+    height: 1px;
+    transform: translateX(-50%);
+
+}
+footer span{
+    color: var(--main-color);
+}
+/* End footer */
+
+/* Start media queries */
+
+@media screen and (max-width:700px) {
+    header .icon{
+        right: 20px;
+    }
+    header #carouselExampleIndicators .carousel-control-prev{
+        left: 0px;
+    }
+}
+@media screen and (max-width:768px){
+    header .carousel-inner .inner{
+        width: 100% !important;
+        padding: 1.25rem .825rem 1.25rem 0  !important;
+    }
+    #quote p{
+        font-size: 1.2rem;
+    }
+    #about .container img{
+        bottom: -50px;
+    }
+}
+@media screen and (max-width:992px) {
+    nav.navbar-expand-lg .navbar-nav .nav-link{
+        margin-bottom: 10px;
+        font-size: 1.025rem;
+    }
+    nav .nav-link::after{
+        bottom: 0;
+    }
+    header .icon{
+        right: 50px;
+    }
+    #design .image{
+        display: none;
+     }
+     #design .content{
+         width: 100% !important;
+     }
+     #subscribe i{
+        left: 4%;
+        
+    }
+}
+/* End media queries */
